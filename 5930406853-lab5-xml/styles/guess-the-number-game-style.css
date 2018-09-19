@@ -1,0 +1,11 @@
+html {
+    font-family: 'Kanit', sans-serif;
+}
+
+body {
+    margin: 0px auto;
+    width: 50%;
+    max-width: 800px;
+    min-width: 480px;
+    padding: 0;
+}

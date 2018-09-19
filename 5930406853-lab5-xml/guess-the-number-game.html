@@ -1,0 +1,32 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="198371 xml lab5 2018/1">
+  <meta name="author" content="Athibet Prawane 593040685-3">
+  <title>Guess The Number Game</title>
+  <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+  <link href="styles/guess-the-number-game-style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <title>Number guessing game</title>
+
+  <h1>Number guessing game</h1>
+  <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if
+    your guess was too high or too low.</p>
+  <div class="form">
+    <label for="guessInput">Enter a guess: </label>
+    <input type="text" id="guessInput" class="guessInput">
+    <input type="submit" value="Submit guess" class="guessSubmit">
+  </div>
+  <div class="resultParas">
+    <p class="guesses"></p>
+    <p class="lastResult"></p>
+    <p class="lowOrHi"></p>
+  </div>
+
+  <script src="scripts/guess-the-number-game-script.js"></script>
+</body>
+
+</html>
