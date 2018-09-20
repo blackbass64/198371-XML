@@ -1,0 +1,37 @@
+html {
+    font-family: 'Kanit', sans-serif;
+    background-color: rgb(3, 3, 39);
+}
+
+body {
+    width: 1200px;
+    height: auto;
+    background-color: white;
+    padding: 10px;
+}
+
+#book-image {
+    padding: 5px;
+    border-style: solid;
+    border-width: medium;
+}
+
+#td-image {
+    padding-top: 20px;
+    vertical-align: top;
+}
+
+#author-image {
+    padding: 5px 15px 5px 0px;
+}
+
+#head-page2 {
+    text-align: left;
+    color: rgb(3, 3, 39);
+    text-shadow: 2px 2px gray;
+}
+
+#create-by, #more-info, #about-author {
+    background-color: rgb(3, 3, 39);
+    color: white;
+}

@@ -30,22 +30,16 @@ button {
     text-align: center;
     font-size: 12pt;
     margin: 2px;
+    background-color: rgb(189, 183, 183);
+    width: 3.5em;
+    border-radius: 50%;
 }
 
 .key-operator, .key-equal, #clear, #toggle {
-    width: 3.5em;
     background-color: orange;
-    border-radius: 50%;
 }
 
-.key-number {
-    width: 3.5em;
-    background-color: rgb(189, 183, 183);
-    border-radius: 50%;
-}
-
-#key-zero {
+.key-zero {
     width: 7.6em;
-    background-color: rgb(189, 183, 183);
     border-radius: 1.75em;
 }

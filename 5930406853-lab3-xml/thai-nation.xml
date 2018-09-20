@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<nation id="th">
+    <name>Thailand</name>
+    <location>Southeast Asia</location>
+    <population>
+        67 millions
+        <median_age>38</median_age>
+        <global_rank>20</global_rank>
+    </population>
+</nation>

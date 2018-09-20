@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<about id="athibet">
+    <name>
+        <first_name>Athibet</first_name>
+        <last_name>Prawane</last_name>
+    </name>
+    <email>p_athibet@kkumail.com</email>
+    <facebook_name>Athibet Prawane</facebook_name>
+    <hometown>Maha Sarakham</hometown>
+    <hobbies>
+        <hobby id="hb01">Book</hobby>
+        <hobby id="hb02">Guitar</hobby>
+    </hobbies>
+    <computer_skill>
+        <skill id="skill01">Java</skill>
+        <skill id="skill02">Swift</skill>
+        <skill id="skill03">JavaScript</skill>
+        <skill id="skill04">HTML</skill>
+    </computer_skill>
+</about>

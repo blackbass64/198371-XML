@@ -1,0 +1,32 @@
+html {
+    font-family: 'Kanit', sans-serif;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+#head-page {
+    text-align: center;
+    color: cornflowerblue;
+    text-shadow: 2px 2px rgb(37, 37, 102);
+}
+
+
+figure {
+    border: thin #c0c0c0 solid;
+    display: flex;
+    flex-flow: column;
+    margin: 0;
+    padding: 5px;
+    width: auto;
+}
+
+figcaption {
+    background-color: #222;
+    color: #fff;
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+}
