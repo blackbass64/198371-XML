@@ -10,7 +10,7 @@ subbtn.addEventListener("click", function () {
         repass = document.getElementById('repass').value;
     
     if (emailStyle.test(mail)) {
-        alert('email true')
+        console.log('email true');
         if (pass.length < 6) {
             alert('Please have at least six characters');
         }
@@ -24,7 +24,7 @@ subbtn.addEventListener("click", function () {
             alert('Password and repeat password need to be the same');
         }
         else {
-            alert('password true');
+            console.log('password true');
         }
     } else {
         alert('Please enter a correct email address');
