@@ -1,10 +1,32 @@
-// var form  = document.getElementsByTagName('form');
-// var email = document.getElementById('mail');
+var emailStyle = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/,
+    passCheckLetter = /^([0-9])+$/,
+    passCheckNum = /^([A-Za-z])+$/;
 
-// form.addEventListener("submit", function (event) {
-//     if (!email.validity.valid) {
-//         alert("I expect an e-mail, darling!");
-        
-//         event.preventDefault();
-//     }
-// }, false);
+var subbtn = document.querySelector('button');
+
+subbtn.addEventListener("click", function () {
+    var mail = document.getElementById('mail').value,
+        pass = document.getElementById('pass').value,
+        repass = document.getElementById('repass').value;
+    
+    if (emailStyle.test(mail)) {
+        alert('email true')
+        if (pass.length < 6) {
+            alert('Please have at least six characters');
+        }
+        else if (passCheckLetter.test(pass)) {
+            alert('Please have at least one letter');
+        }
+        else if (passCheckNum.test(pass)) {
+            alert('Please have at least one number');
+        }
+        else if (pass != repass) {
+            alert('Password and repeat password need to be the same');
+        }
+        else {
+            alert('password true');
+        }
+    } else {
+        alert('Please enter a correct email address');
+    }
+})
