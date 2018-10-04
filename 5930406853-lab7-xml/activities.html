@@ -30,15 +30,19 @@
                 var tag_li = document.createElement('li');
                 var tag_a = document.createElement('a');
                 var tag_img = document.createElement('img');
+                var tag_br = document.createElement('br');
 
-                tag_li.textContent = 'Date:' + data[i].dateSt + ' time:' + data[i].timeSt + ' if interested, call ' + data[i].contact.phone;
+                var text_li = 'Date:' + data[i].dateSt + ' time:' + data[i].timeSt + ' if interested, call ' + data[i].contact.phone + '<br/>';
+                tag_li.innerHTML = text_li;
+
                 tag_a.textContent = data[i].title;
-                tag_a.setAttribute('href', '#');
+                tag_a.setAttribute('href', data[i].url);
                 tag_img.setAttribute('src', data[i].image);
 				tag_img.style.width = '50%';
 				tag_img.style.height = 'auto';
                 
                 tag_li.appendChild(tag_a);
+                tag_a.appendChild(tag_br);
                 tag_li.appendChild(tag_img);
                 act_list.appendChild(tag_li);
             }
