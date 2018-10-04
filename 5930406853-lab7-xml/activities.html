@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="198371 xml lab7 2018/1">
+    <meta name="author" content="Athibet Prawane 593040685-3">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Activities KKU</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <section></section>
+    <script>
+        var req = new XMLHttpRequest();
+        req.open('GET', 'activities.json');
+        req.responseType = 'json';
+        req.send();
+
+        req.onload = function () {
+            var tag_h1 = document.createElement('h1');
+            tag_h1.innerHTML = 'Current KKU Activities';
+            document.querySelector('section').appendChild(tag_h1);
+
+            var act_list = document.createElement('ol');
+            var data = req.response['activities'];
+
+            for (var i = 0; i < data.length; i++) {
+                var tag_li = document.createElement('li');
+                var tag_a = document.createElement('a');
+                var tag_img = document.createElement('img');
+
+                tag_li.textContent = 'Date:' + data[i].dateSt + ' time:' + data[i].timeSt + ' if interested, call ' + data[i].contact.phone;
+                tag_a.textContent = data[i].title;
+                tag_a.setAttribute('href', '#');
+                tag_img.setAttribute('src', data[i].image);
+				tag_img.style.width = '50%';
+				tag_img.style.height = 'auto';
+                
+                tag_li.appendChild(tag_a);
+                tag_li.appendChild(tag_img);
+                act_list.appendChild(tag_li);
+            }
+            document.querySelector('section').appendChild(act_list);
+        }
+    </script>
+</body>

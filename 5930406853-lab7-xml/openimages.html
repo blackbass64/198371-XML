@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="198371 xml lab7 2018/1">
+    <meta name="author" content="Athibet Prawane 593040685-3">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Open Images</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <section></section>
+    <script>
+        var req = new XMLHttpRequest();
+        var reqURL = 'https://api.data.go.th/search_virtuoso/api/dataset/query?dsname=vir_237_1535648421&loadAll=1&type=json&limit=10';
+        req.open('GET', reqURL);
+        req.responseType = 'json';
+        req.send();
+
+        req.onload = function () {
+            var tag_h1 = document.createElement('h1');
+            tag_h1.innerHTML = 'Open Data Images';
+            document.querySelector('section').appendChild(tag_h1);
+
+            var images_list = document.createElement('ol');
+            var data = req.response['data'];
+
+            for (var i = 0; i < data.length; i++) {
+                var tag_li = document.createElement('li');
+                var tag_img = document.createElement('img');
+                tag_img.setAttribute('src', data[i].thumb_pic);
+
+                tag_li.appendChild(tag_img);
+                images_list.appendChild(tag_li);
+            }
+            document.querySelector('section').appendChild(images_list);
+        }
+    </script>
+</body>
+
+</html>

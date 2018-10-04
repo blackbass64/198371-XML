@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="198371 xml lab7 2018/1">
+    <meta name="author" content="Athibet Prawane 593040685-3">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tutorial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <script>
+        var req = new XMLHttpRequest();
+        req.open('GET', 'tutorial.json');
+        req.responseType = 'json';
+        req.send();
+
+        req.onload = function () {
+            var jsonObj = req.response;
+            var tutor = jsonObj['tutorials'];
+            for (var i = 0; i < tutor.length; i++) {
+
+                var tag_h1 = document.createElement('h1');
+                var tag_a = document.createElement('a');
+
+                tag_a.textContent = tutor[i].display;
+                tag_a.setAttribute('href', tutor[i].url);
+
+                tag_h1.appendChild(tag_a);
+                document.body.appendChild(tag_h1);
+            }
+        }
+    </script>
+</body>
+
+</html>
