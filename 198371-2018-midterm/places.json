@@ -1,0 +1,114 @@
+{
+    "places": [
+        {
+            "title": "Center KKU Library",
+            "contact": "",
+            "web": "",
+            "picture": "http://www.kku.ac.th/ikku/api/images/data/xGKNf7n3KldtuQUwt05LIb59KhTjj.jpg",
+            "type": "06",
+            "location": {
+                "lat": "16.47678",
+                "long": "102.823949999999"
+            }
+        },
+        {
+            "title": "Food Center and Service (Complex) 1",
+            "contact": "",
+            "web": "",
+            "picture": "http://www.kku.ac.th/ikku/api/images/data/KqtX6RXcNMLCWb3OrhHnDn12CsV8.jpg",
+            "type": "02",
+            "location": {
+                "lat": "16.477731",
+                "long": "102.823115000000"
+            }
+        },
+        {
+            "title": "Food Center and Service (Complex) 2",
+            "contact": "",
+            "web": "",
+            "picture": "http://www.kku.ac.th/ikku/api/images/data/YhBS7HloF70uuMXUWBIhLgAkWdez0.jpg",
+            "type": "02",
+            "location": {
+                "lat": "16.478024",
+                "long": "102.819691000000"
+            }
+        },
+        {
+            "title": "กองกิจการนักศึกษา",
+            "contact": "",
+            "web": "",
+            "picture": "http://www.kku.ac.th/ikku/api/images/data/myXvSxJwqbzsgf90KxkvvqPBpoAJCs.jpg",
+            "type": "01",
+            "location": {
+                "lat": "16.47802",
+                "long": "102.820519999999"
+            }
+        },
+        {
+            "title": "คณะทันตแพทยศาสตร์",
+            "contact": "",
+            "web": "",
+            "picture": "http://www.kku.ac.th/ikku/api/images/data/kqePmT9hj52xQpi1yxiCqL86XmTh3.jpg",
+            "type": "01",
+            "location": {
+                "lat": "16.4666415717578",
+                "long": "102.829008338623"
+            }
+        },
+        {
+            "title": "คณะนิติศาสตร์",
+            "contact": "",
+            "web": "",
+            "picture": "http://www.kku.ac.th/ikku/api/images/data/egKsfZCmXgEIC1HZgnS2nytCKqtUzw.jpg",
+            "type":"01",
+            "location": {
+                "lat": "16.45017",
+                "long": "102.81563"
+            }
+        },
+        {
+            "title": "คณะพยาบาลศาสตร์",
+            "contact": "",
+            "web": "",
+            "picture": "http://www.kku.ac.th/ikku/api/images/data/NqXZ2mjhOyRybqoANTstd87htmEni.jpg",
+            "type": "01",
+            "location": {
+                "lat": "16.46960",
+                "long": "102.82497"
+            }
+        },
+        {
+            "title": "คณะมนุษยศาสตร์และสังคมศาสตร์",
+            "contact": "",
+            "web": "",
+            "picture": "http://www.kku.ac.th/ikku/api/images/data/OvOr0rWgQSvMBlqdvLOlMBJdrt.jpg",
+            "type": "01",
+            "location": {
+                "lat": "16.4752",
+                "long": "102.826299999999"
+            }
+        },
+        {
+            "title": "คณะวิทยาการจัดการ",
+            "contact": "",
+            "web": "",
+            "picture": "http://www.kku.ac.th/ikku/api/images/data/Tm5AziHe4DI6gfRFfTNIdIVZS03gB.jpg",
+            "type": "01",
+            "location": {
+                "lat": "16.47435",
+                "long": "102.825230000000"
+            }
+        },
+        {
+            "title": "คณะวิทยาศาสตร์ ",
+            "contact": "",
+            "web": "",
+            "picture": "http://www.kku.ac.th/ikku/api/images/data/UoU3Fh4SN0rwA84R8u3BQeOJk41fu2.jpg",
+            "type": "01",
+            "location": {
+                "lat": "16.47427",
+                "long": "102.82353"
+            }
+        }
+    ]
+}

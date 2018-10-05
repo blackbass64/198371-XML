@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="198371 xml Midterm 2018/1">
+    <meta name="author" content="Athibet Prawane 593040685-3">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>KKU Places</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <section></section>
+    <script>
+        var req = new XMLHttpRequest();
+        req.open('GET', 'places.json');
+        req.responseType = 'json';
+        req.send();
+
+        req.onload = function () {
+            var act_list = document.createElement('ol');
+            var data = req.response['places'];
+
+            for (var i = 0; i < data.length; i++) {
+                var tag_li = document.createElement('li');
+                var tag_img = document.createElement('img');
+                var tag_br = document.createElement('br');
+
+                var lat = data[i].location.lat;
+                var lng = data[i].location.long;
+                var text_li = data[i].title + ' is at lat:' + parseFloat(Math.round(lat * 100) / 100).toFixed(2) + ' lng:' + parseFloat(Math.round(lng * 100) / 100).toFixed(2) + '<br/>';
+                tag_li.innerHTML = text_li;
+
+                tag_img.setAttribute('src', data[i].picture);
+                tag_img.style.width = '30%';
+                tag_img.style.height = 'auto';
+                tag_img.style.margin = '20px';
+
+                tag_li.appendChild(tag_img);
+                act_list.appendChild(tag_li);
+            }
+            document.querySelector('section').appendChild(act_list);
+        }
+    </script>
+</body>

@@ -1,0 +1,149 @@
+/* Home page */
+/* unvisited link */
+a:link {
+    color: red;
+}
+
+/* visited link */
+a:visited {
+    color: green;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+}
+
+.page-link {
+    font-size: 18px;
+    margin: 20px;
+}
+
+h1 {
+    text-align: left;
+    color: black;
+}
+
+.column {
+    float: left;
+    height: 100%;
+}
+
+.main {
+    margin-left: 20%;
+}
+
+#fix {
+    top: 50px;
+    left: 20px;
+    position: fixed;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+.book {
+    width: 200px;
+    height: auto;
+}
+
+/* quoate  */
+.quote {
+    color: deeppink;
+    margin-top: 2rem;
+    font-size: 16px;
+}
+
+q {
+    color: brown;
+    font-size: 18px;    
+}
+
+
+
+/* Thai books */
+.table-book {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+thead {
+    font-weight: bold;
+}
+
+.table-thai-book {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.rol-odd {
+    background-color: #f2f2f2;
+}
+
+.rol-even {
+    background-color: #fefefe;
+}
+
+/* Eng books */
+.table-eng-book {
+    padding: 20px 10px 10px 20px;
+}
+
+.num-eng-book {
+    color: red;
+}
+
+
+/* Link */
+.square {
+    list-style-type:square;
+    color: black;
+}
+
+.book-link {
+    color: blue;
+    padding:  20px 10px 10px 30px;
+}
+
+
+/* Form */
+.form-header {
+    text-align: center;
+}
+
+label {
+    color: red;
+}
+
+#ten-book, #ref-form {
+    color: blue;
+}
+
+#ref-form:hover {
+    color: skyblue;
+}
+
+input {
+    width: 98%;
+    padding: 15px;
+    margin-top: 5px;
+    margin-bottom: 22px;
+    background-color: #f1f1f1;
+    border: none;
+}
+
+button {
+    width: 100%;
+    color: white;
+    background-color: green;
+    padding: 20px 100px 20px 100px;
+    border: none;
+}

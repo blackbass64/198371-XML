@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://athibet.in.th"
+           xmlns:tns="http://athibet.in.th"
+           elementFormDefault="qualified">
+    <xsd:element name="resume">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element type="xsd:string" name="name"/>
+                <xsd:element name="contact_info">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element type="xsd:string" name="email"/>
+                            <xsd:element type="xsd:int" name="phone"/>
+                            <xsd:element type="xsd:string" name="address"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="education">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="degree" maxOccurs="unbounded" minOccurs="0">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element type="xsd:string" name="level"/>
+                                        <xsd:element type="xsd:string" name="field"/>
+                                        <xsd:element name="college">
+                                            <xsd:complexType>
+                                                <xsd:simpleContent>
+                                                    <xsd:extension base="xsd:string">
+                                                        <xsd:attribute type="xsd:string" name="id" use="optional"/>
+                                                    </xsd:extension>
+                                                </xsd:simpleContent>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="skills">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="programming_languages">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="language" maxOccurs="unbounded" minOccurs="0">
+                                            <xsd:complexType>
+                                                <xsd:sequence>
+                                                    <xsd:element type="xsd:string" name="name"/>
+                                                    <xsd:element name="specialization">
+                                                        <xsd:complexType>
+                                                            <xsd:sequence>
+                                                                <xsd:element type="xsd:string" name="field" maxOccurs="unbounded" minOccurs="0"/>
+                                                            </xsd:sequence>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="human_language">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="language" maxOccurs="unbounded" minOccurs="0">
+                                            <xsd:complexType mixed="true">
+                                                <xsd:sequence>
+                                                    <xsd:element type="xsd:string" name="attribute" minOccurs="0"/>
+                                                    <xsd:element type="xsd:string" name="level" maxOccurs="unbounded" minOccurs="0"/>
+                                                    <xsd:element name="qualification" minOccurs="0">
+                                                        <xsd:complexType>
+                                                            <xsd:sequence>
+                                                                <xsd:element name="test">
+                                                                    <xsd:complexType mixed="true">
+                                                                        <xsd:sequence>
+                                                                            <xsd:element type="xsd:short" name="score"/>
+                                                                        </xsd:sequence>
+                                                                    </xsd:complexType>
+                                                                </xsd:element>
+                                                            </xsd:sequence>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
+

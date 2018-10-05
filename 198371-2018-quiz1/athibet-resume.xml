@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resume xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://xml.netbeans.org/schema/athibet-resume athibet-resume.xsd"
+        xmlns="http://xml.netbeans.org/schema/athibet-resume">
+    <name>Mandee Jaidee</name>
+    <contact_info>
+        <email>manee@kkumail.com</email>
+        <phone>0891234567</phone>
+        <address>123 Mittraparp Rd. A. Muang Khon Kaen 40002</address>
+    </contact_info>
+    <education>
+        <degree>
+            <level>Bachelor</level>
+            <field>B.E. in Computer Engineering</field>
+            <college id="kku">Khon Kaen University</college>
+        </degree>
+        <degree>
+            <level>Master</level>
+            <field>M.S. in Computer Engineering</field>
+            <college id="cu">Chulalongkorn University</college>
+        </degree>
+    </education>
+    <skills>
+        <programming_languages>
+            <language>
+                <name>Python</name>
+                <specialization>
+                    <field>Artificial Intelligence</field>
+                    <field>Image Processing</field>
+                    <field>Socket Server</field>
+                </specialization>
+            </language>
+            <language>
+                <name>R</name>
+                <specialization>
+                    <field>Data Analysis</field>
+                    <field>Data Visualization</field>
+                </specialization>
+            </language>
+        </programming_languages>
+        <human_language>
+            <language>
+                Thai<attribute>Native</attribute>
+            </language>
+            <language>
+                English<level>Fluent (Reading, Listening)</level>
+                <level>Intermediate (Speaking, Writing)</level>
+                <qualification>
+                    <test>TOEIC<score>595</score></test>
+                </qualification>
+            </language>
+        </human_language>
+    </skills>
+</resume>

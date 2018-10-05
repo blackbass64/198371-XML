@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="198371 xml Midterm 2018/1">
+    <meta name="author" content="Athibet Prawane 593040685-3">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ฟอร์มสั่งซื้อหนังสือ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <h1 class="form-header">ใบสั่งซื้อหนังสือ</h1>
+    <form>
+        <label>อีเมล*</label></br>
+        <input id="mail" type="email" placeholder="a@b.com" required></br>
+        <label>เบอร์โทร*</label></br>
+        <input id="tel" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required></br>
+        <label id="ten-book">จำนวนเล่มของหนังสือ 30 ชาติในเชียงราย*</label></br>
+        <input id="num" type="number" name="quantity" min="1" value="1" required></br>
+
+        <p>การสร้างบัญชีนี้คุณยอมรับ<a id="ref-form" href="https://classroom.google.com/u/2/c/MTQ5Njc4MjI2MzVa">ข้อกำหนดและความเป็นส่วนตัวของเรา</a></p>
+        <button type="submit" onclick="mySubmit()">สั่งซื้อ</button>
+    </form>
+     
+    <script>
+        function mySubmit() {
+            var mail = document.getElementById('mail').value;
+            var tel = document.getElementById('tel').value;
+            var num= document.getElementById('num').value;
+            
+            alert('ขอบคุณ (' + mail + ', ' + tel + ') สำหรับการสั่งซื้อหนังสือ 30 ชาติในเชียงราย จำนวน ' + num + ' เล่ม');
+        }
+    </script>
+</body>

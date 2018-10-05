@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://xml.netbeans.org/schema/athibet-resume"
+           xmlns:tns="http://xml.netbeans.org/schema/athibet-resume"
+           elementFormDefault="qualified">
+    <xs:element name="resume">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element type="xs:string" name="name"/>
+                <xs:element name="contact_info">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="email"/>
+                            <xs:element type="xs:int" name="phone"/>
+                            <xs:element type="xs:string" name="address"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="education">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="degree" maxOccurs="unbounded" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element type="xs:string" name="level"/>
+                                        <xs:element type="xs:string" name="field"/>
+                                        <xs:element name="college">
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="xs:string">
+                                                        <xs:attribute type="xs:string" name="id" use="optional"/>
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="skills">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="programming_languages">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="language" maxOccurs="unbounded" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element type="xs:string" name="name"/>
+                                                    <xs:element name="specialization">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element type="xs:string" name="field" maxOccurs="unbounded" minOccurs="0"/>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="human_language">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="language" maxOccurs="unbounded" minOccurs="0">
+                                            <xs:complexType mixed="true">
+                                                <xs:sequence>
+                                                    <xs:element type="xs:string" name="attribute" minOccurs="0"/>
+                                                    <xs:element type="xs:string" name="level" maxOccurs="unbounded" minOccurs="0"/>
+                                                    <xs:element name="qualification" minOccurs="0">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="test">
+                                                                    <xs:complexType mixed="true">
+                                                                        <xs:sequence>
+                                                                            <xs:element type="xs:short" name="score"/>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+
