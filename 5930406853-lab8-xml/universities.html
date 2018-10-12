@@ -46,11 +46,11 @@
   <h1>Some University</h1>
 
   <form>
-    <label for="uni-choose">Choose a university</label>
-    <select id="uni-choose" name="uni-choose">
-      <option value='cmu'>Carnegie Mellon University</option>
-      <option value="umich">University of Michigan</option>
-      <option value="kku2">Khon Kaen University</option>
+    <label for="univ-choose">Choose a university</label>
+    <select id="univ-choose" name="univ-choose">
+      <option selected="selected">Carnegie Mellon University</option>
+      <option>University of Michigan</option>
+      <option>Khon Kaen University</option>
     </select>
   </form>
 
@@ -59,31 +59,37 @@
   <section></section>
 
   <script>
-    var uniChoose = document.querySelector('select'),
-        imgDisplay = document.querySelector('section'),
-        image = document.createElement('img');
-    imgDisplay.appendChild(image);
-    image.style.width = '400px';
+    var uChoose = document.querySelector('select'),
+      imgDisplay = document.querySelector('section'),
+      image = document.createElement('img'),
+      urlJson = 'unames.json';
 
-    uniChoose.onchange = function () {
-      var uni = uniChoose.value;
-      updateDisplay(uni);
+    uChoose.onchange = function () {
+      var uName = uChoose.value;
+      mapUnivNameImage(uName);
     };
 
-    function updateDisplay(uni) {
-      var url = uni + '.jpg';
-
-      //Fetch
-      fetch(url).then(function (response) {
-        response.text().then(function (text) {
-          image.src = 'images/' + url;
+    function mapUnivNameImage(uName) {
+      fetch(urlJson)
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (myJson) {
+          var jsonObj = myJson;
+          var imgFile = jsonObj[uName];
+          displayImage(imgFile);
         });
-      });
     };
 
-    //set default show the verse
-    updateDisplay('cmu');
-    uniChoose.value = 'cmu';
+    function displayImage(imgFile) {
+      image.src = imgFile;
+      image.style.width = '400px';
+      image.style.height = 'auto';
+      imgDisplay.appendChild(image);
+    }
+
+    mapUnivNameImage(uChoose.value);
+    console.log('pass')
   </script>
 </body>
 
