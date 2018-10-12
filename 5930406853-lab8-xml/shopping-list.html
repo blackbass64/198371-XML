@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="198371 xml lab8 2018/1">
+    <meta name="author" content="Athibet Prawane 593040685-3">
+    <title>My shopping list</title>
+    <style>
+        li {
+            margin-bottom: 10px;
+        }
+
+        li button {
+            font-size: 8px;
+            margin-left: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>My shopping list</h1>
+
+    <div>
+        <label for="item">Enter a new item:</label>
+        <input type="text" name="item" id="item">
+        <button>Add item</button>
+    </div>
+
+    <ul></ul>
+
+    <script>
+        var input = document.querySelector('input'),
+            ul = document.querySelector('ul'),
+            addBtn = document.querySelector('button'),
+            counter = document.createElement('p'),
+            count = 0;
+
+        input.focus();
+
+        addBtn.addEventListener('click', function addItem() {
+            var myItem = input.value;
+            var listItem = document.createElement('li');
+            var listText = document.createElement('span');
+            var delBtn = document.createElement('button');
+
+            listText.textContent = myItem;
+            delBtn.textContent = 'Delete';
+
+            listItem.appendChild(listText);
+            listItem.appendChild(delBtn);
+            ul.appendChild(listItem);
+            ul.appendChild(counter);
+            count++;
+            showCount(count);
+
+            delBtn.addEventListener('click', function deleteList() {
+                count--;
+                showCount(count);
+                ul.removeChild(listItem);
+                input.focus();
+                console.log(count);
+            });
+
+            input.value = '';
+            input.focus();
+            console.log(count);
+        });
+
+        function showCount(count) {
+            var time;
+            if (count == '0' || count == '1') time = ' item';
+            else time = ' items';
+            counter.textContent = 'The list has ' + count + time;
+        }
+    </script>
+
+</body>
+
+</html>

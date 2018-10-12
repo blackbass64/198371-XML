@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="198371 xml lab8 2018/1">
+    <meta name="author" content="Athibet Prawane 593040685-3">
+    <title>Simple DOM example</title>
+</head>
+
+<body>
+    <section></section>
+
+    <script>
+        var sect = document.querySelector('section');
+        var image = document.createElement('img');
+        image.src = 'images/en-kku.jpg';
+        image.style.width = '700px';
+        image.style.margin = '20px';
+
+        var link = document.createElement('a');
+        link.href = 'https://www.en.kku.ac.th/web';
+        link.target = '_blank_';
+
+        link.appendChild(image);
+        sect.appendChild(link);
+
+        var para = document.createElement('p');
+        para.textContent = 'We hope you enjoy learning';
+        para.style.fontSize = '30px';
+        para.style.color = 'white';
+        para.style.backgroundColor = 'black';
+        para.style.margin = '20px';
+        para.style.padding = '20px 0 20px 0';
+        para.style.width = '700px';
+        para.style.textAlign = 'center';
+    
+        sect.appendChild(para);
+    </script>
+</body>
+
+</html>
