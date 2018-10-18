@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Some Restaurants in Khon Kaen</title>
+    <style>
+        /* h1 {
+            text-align: center;
+        } */
+    </style>
+</head>
+
+<body>
+    <h1>Some Restaurants in Khon Kaen</h1>
+    <section></section>
+
+    <script>
+        var urlJson = 'restaurants-kk.json',
+            num = document.createElement('ol'),
+            sec = document.querySelector('section');
+
+        fetch(urlJson)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (myJson) {
+                console.log(myJson)
+                var rest = myJson['results'];
+                console.log(rest)
+                for (var i = 0; i < rest.length; i++) {
+                    var list = document.createElement('li');
+                    var div1 = document.createElement('div');
+                    div1.style.color = 'green';
+                    div1.textContent = 'name = ' + rest[i].name;
+                    var div2 = document.createElement('div');
+                    div2.style.color = 'blue';
+                    div2.textContent = 'location:lat = ' + rest[i].geometry.location.lat + ' lng = ' + rest[i].geometry.location.lng;
+
+                    list.appendChild(div1);
+                    list.appendChild(div2);
+                    num.appendChild(list);
+                    sec.appendChild(num);
+                }
+            });
+    </script>
+
+</body>
+
+</html>
