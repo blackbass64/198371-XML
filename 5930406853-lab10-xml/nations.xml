@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<nations>
+    <nation id="th">
+        <name>Thailand</name>
+        <location>Southeast Asia</location></nation>
+    <nation id="us">
+        <name>The United States of America</name>
+        <location>America</location>
+    </nation>
+</nations>

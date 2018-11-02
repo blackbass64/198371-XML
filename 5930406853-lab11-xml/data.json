@@ -1,0 +1,14 @@
+{
+    "name": "CM",
+    "courses": [
+        "198330",
+        "198371"
+    ],
+    "places": {
+        "residence": "Khon Kaen",
+        "visit": [
+            "Songkla",
+            "Bangkok"
+        ]
+    }
+}
