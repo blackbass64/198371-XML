@@ -8,4 +8,4 @@ app.get('/', function (req, res) {
         res.send(data)
         console.log(data)
     });
-}).listen(8080);
+}).listen(8080); 
