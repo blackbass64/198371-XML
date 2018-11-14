@@ -1,0 +1,61 @@
+<script src="https://vuejs.org/js/vue.min.js"></script>
+
+<!-- app.message = "message..." -->
+<div id="app">
+    <p>{{ message }}</p>
+    <hr>
+</div>
+
+<div id="app-2">
+    <span v-bind:title="message">
+        Computer Engineering
+    </span>
+    <hr>
+</div>
+
+<!-- app3.seen = false ... to hide meassage -->
+<div id="app-3">
+    <span v-if="seen">Now you see me</span>
+    <hr>
+</div>
+
+<!-- app4.todos.push({ text: "message..."}) -->
+<div id="app-4">
+    <ol>
+        <li v-for="todo in todos">
+            {{ todo.text }}
+        </li>
+    </ol>
+    <hr>
+</div>
+
+<div id="app-5">
+    <p>{{ message }}</p>
+    <button v-on:click="reverseMessage">Reverse Message</button>
+    <hr>
+</div>
+
+<div id="app-6">
+    <p>{{ message }}</p>
+    <input v-model="message">
+    <hr>
+</div>
+
+<div id="app-7">
+    <ol>
+        <todo-item
+            v-for="item in groceryList"
+            v-bind:todo="item"
+            v-bind:key="item.id">
+        </todo-item>
+    </ol>
+    <hr>
+</div>
+
+<!-- v-once is fixed the message can not change -->
+<div id="app-8">
+    <p>{{ message }} <span v-once>This will never change: {{ kku }}</span></p>
+    <hr>
+</div>
+
+<script src="scripts/vue.js"></script>
