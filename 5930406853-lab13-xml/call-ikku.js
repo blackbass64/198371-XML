@@ -25,6 +25,7 @@ request1.get("https://www.kku.ac.th/ikku/api/activities/services/topActivity.php
             res.write("<td style=\"padding-left: 20px;\">" + (i+1) + ". </td>");
             res.write("<td style=\"padding-left: 20px;\">" + act[i].dateSt + "</td>");
             res.write("<td style=\"padding-left: 20px;\"><a href=\"" + act[i].url + "\">" + act[i].title + "</a></td>");
+            // you cat setting width in style => width: XX%
             res.write("<td style=\"padding-left: 20px;\">" + act[i].contact.phone + "</td>");
             res.write("<td style=\"padding-left: 20px;\">");
         }
