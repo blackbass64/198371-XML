@@ -30,13 +30,17 @@
 
             var routes = "<route>";
             routes += "<summary>" + summary + "</summary>";
-
-            var steps = route.find("leg").find("step");
             routes += "<steps>";
 
+            var steps = route.find("leg").find("step");
+            
+
             $(steps).each(function () {
-                routes += ("<step><direction><![CDATA[" + $(this).find("html_instructions").text() + "]]></direction><distance>" + $(this).find(
-                    "distance").find("value").text() + "</distance></step>")
+                routes += "<step><direction><![CDATA[";
+                routes += $(this).find("html_instructions").text();
+                routes += "]]></direction><distance>";
+                routes += $(this).find("distance").find("value").text();
+                routes += "</distance></step>";
             });
 
             routes += "</steps></route>";

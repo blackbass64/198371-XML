@@ -13,12 +13,12 @@ app.get('/', function (req, res) {
         }
         
        var newsArr = [];
-       var newObj = {};
         for (var i = 0; i < obj.news.length; i++) {
             var title = obj.news[i].title;
             var url = obj.news[i].url;
             var img = obj.news[i].picnewsUrl[0];
 
+            var newObj = {};
             newObj.title = title;
             newObj.url = url;
             newObj.img = img;
