@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GeocodeResponse>
+    <status>OK</status>
+    <result>
+        <type>establishment</type>
+        <type>point_of_interest</type>
+        <type>university</type>
+        <formatted_address>23 Moo 16 Mitrapha Rd ศิลา Amphoe Mueang Khon Kaen, Chang Wat Khon Kaen 40002, Thailand</formatted_address>
+        <address_component>
+            <long_name>23 Moo 16 Mitrapha Rd</long_name>
+            <short_name>23 Moo 16 Mitrapha Rd</short_name>
+            <type>route</type>
+        </address_component>
+        <address_component>
+            <long_name>ศิลา</long_name>
+            <short_name>ศิลา</short_name>
+            <type>locality</type>
+            <type>political</type>
+        </address_component>
+        <address_component>
+            <long_name>Amphoe Mueang Khon Kaen</long_name>
+            <short_name>อ. เมืองขอนแก่น</short_name>
+            <type>administrative_area_level_2</type>
+            <type>political</type>
+        </address_component>
+        <address_component>
+            <long_name>Chang Wat Khon Kaen</long_name>
+            <short_name>จ.ขอนแก่น</short_name>
+            <type>administrative_area_level_1</type>
+            <type>political</type>
+        </address_component>
+        <address_component>
+            <long_name>Thailand</long_name>
+            <short_name>TH</short_name>
+            <type>country</type>
+            <type>political</type>
+        </address_component>
+        <address_component>
+            <long_name>40002</long_name>
+            <short_name>40002</short_name>
+            <type>postal_code</type>
+        </address_component>
+        <geometry>
+            <location>
+                <lat>16.4775510</lat>
+                <lng>102.8231050</lng>
+            </location>
+            <location_type>GEOMETRIC_CENTER</location_type>
+            <viewport>
+                <southwest>
+                    <lat>16.4762020</lat>
+                    <lng>102.8217560</lng>
+                </southwest>
+                <northeast>
+                    <lat>16.4789000</lat>
+                    <lng>102.8244540</lng>
+                </northeast>
+            </viewport>
+        </geometry>
+        <place_id>ChIJI4j83Y2KIjERMSJbfDxYQL4</place_id>
+        <plus_code>
+            <global_code>7P84FRHF+26</global_code>
+            <compound_code>FRHF+26 Khon Kaen, Mueang Khon Kaen District, Khon Kaen, Thailand</compound_code>
+        </plus_code>
+    </result>
+</GeocodeResponse>
