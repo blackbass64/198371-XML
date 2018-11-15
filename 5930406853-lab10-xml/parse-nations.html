@@ -30,7 +30,7 @@
             var nations = $(xml).find("nation");
             $("#stage").empty();
             $(nations).each(function () {
-                $("#stage").append("<li>" + $(this).find("name").text() + ' in ' + $(this).find("location").text() +
+                $("#stage").append("<li>" + $(this).find("name").text() + ' is in ' + $(this).find("location").text() +
                     "</li>")
             });
         }

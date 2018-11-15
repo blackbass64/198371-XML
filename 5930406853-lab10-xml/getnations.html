@@ -17,9 +17,9 @@
             $("#driver").click(function (event) {
                 $.getJSON('nations.json', function (jd, index) {
                     var result = "<ul>";
-                    var j = jd['nations'];
+                    var j = jd.nations;
                     for (i = 0; i < j.length; i++) {
-                        result += '<li>' + j[i].name + ' in ' + j[i].location + '</li>';
+                        result += '<li>' + j[i].name + ' is in ' + j[i].location + '</li>';
                     }
                     result += "</ul>";
                     $('#stage').html(result);
@@ -31,26 +31,3 @@
 </body>
 
 </html>
-
-<!-- <!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>jQuery</title>
-    <script type="text/javascript" src="scripts/jquery-3.3.1.min.js"></script>
-</head>
-
-<body>
-    <p>Click on the button to load result.json file</p>
-
-    <div id="stage" style="background-color:#cc0;">
-        STAGE
-    </div>
-    <input type="button" id="driver" value="Load Data" />
-
-    <script src="scripts/main.js"></script>
-</body>
-
-</html> -->

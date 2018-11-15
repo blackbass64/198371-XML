@@ -18,6 +18,7 @@
         <p>STAGE</p>
     </section>
     <button>Load Data</button>
+
     <script>
         $(document).ready(function () {
             $('button').click(function () {
@@ -32,9 +33,6 @@
             });
         });
 
-        // Address: 23 Moo 16 Mitrapha Rd ศิลา Amphoe Mueang Khon Kaen, Chang Wat Khon Kaen 40002, Thailand
-        // Latitude: 16.477551 Longitude: 102.8231050
-
         function updateStage(xml) {
             $('#stage').empty();
             var result = '<p>';
@@ -42,8 +40,6 @@
             var location = $(xml).find('result').find('geometry').find('location');
             var lat = location.find('lat');
             var lng = location.find('lng');
-
-            var dis_arr = [];
 
             result += 'Address: ' + address.text() + '<br>';
             result += 'Latitude: ' + lat.text() + ' Longtitude: ' + lng.text();
