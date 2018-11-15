@@ -28,6 +28,7 @@
 
         function parseXml(xml) {
             var nations = $(xml).find("nation");
+            console.log(nations)
             $("#stage").empty();
             $(nations).each(function () {
                 $("#stage").append("<li>" + $(this).find("name").text() + ' is in ' + $(this).find("location").text() +

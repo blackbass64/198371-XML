@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Direction Routes</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>Direction Routes from Khon Kaen to Chaiang Mai</h1>
+    <section></section>
+    
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: 'kk-cm-routes.xml',
+                type: 'GET',
+                dataType: "xml",
+                success: function (data) {
+                    parseXml(data);
+                }
+            });
+        });
+
+        function parseXml(xml) {
+            var locats = document.createElement('ol'),
+                routes = document.createElement('p'),
+                sec = document.querySelector('section');
+
+
+            var route = $(xml).find("route");
+            var summary = route.find("summary").text();
+
+            routes.textContent = "Using " + summary;
+            routes.style.backgroundColor = "Yellow";
+            sec.appendChild(routes);
+
+            var steps = route.find("leg").find("step");
+
+            $(steps).each(function () {
+                var list = document.createElement('li');
+                list.innerHTML = $(this).find("html_instructions").text() + "<div>(" + $(this).find(
+                    "distance").find("value").text() + " m.)</div>";
+
+                locats.appendChild(list);
+            });
+            sec.appendChild(locats);
+        }
+    </script>
+
+</body>
+
+</html>

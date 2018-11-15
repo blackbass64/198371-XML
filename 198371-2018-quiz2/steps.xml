@@ -1,0 +1,143 @@
+<route>
+    <summary>Route 12 and Route 11</summary>
+    <steps>
+        <step>
+            <direction>
+                <![CDATA[Head <b>north</b> on <b>Route 2</b>]]>
+            </direction>
+            <distance>422</distance>
+        </step>
+        <step>
+            <direction>
+                <![CDATA[Take the exit toward <b>Chum Phae Frontage Road</b>/<b>Kalasin</b>]]>
+            </direction>
+            <distance>150</distance>
+        </step>
+        <step>
+            <direction>
+                <![CDATA[Continue onto <b>Route 12</b>]]>
+            </direction>
+            <distance>408</distance>
+        </step>
+        <step>
+            <direction>
+                <![CDATA[Turn <b>left</b> to stay on <b>Route 12</b>]]>
+            </direction>
+            <distance>4429</distance>
+        </step>
+        <step>
+            <direction>
+                <![CDATA[Keep <b>right</b> to stay on <b>Route 12</b>]]>
+            </direction>
+            <distance>195779</distance>
+        </step>
+        <step>
+            <direction>
+                <![CDATA[Continue straight to stay on <b>Route 12</b>]]>
+            </direction>
+            <distance>16502</distance>
+        </step>
+        <step>
+            <direction>
+                <![CDATA[Keep <b>right</b> to stay on <b>Route 12</b>]]>
+            </direction>
+            <distance>91487</distance>
+        </step>
+        <step>
+            <direction>
+                <![CDATA[Slight <b>right</b> onto <b>Route 126</b>]]>
+            </direction>
+            <distance>2312</distance>
+        </step>
+        <step>
+            <direction>
+                <![CDATA[Slight <b>left</b> to stay on <b>Route 126</b>]]>
+            </direction>
+            <distance>479</distance>
+        </step>
+        <step>
+            <direction>
+                <![CDATA[Turn <b>right</b> at <b>ทางแยก ดงประโดก</b> onto <b>Route 11</b>]]>
+            </direction>
+            <distance>143268</distance>
+        </step>
+        <step>
+            <direction>
+                <![CDATA[Turn <b>left</b>]]>
+            </direction>
+            <distance>11393</distance>
+        </step>
+        <step>
+            <direction>
+                <![CDATA[At <b>ทางแยก ปางเคาะ</b>, continue onto <b>Route 11</b>]]>
+            </direction>
+            <distance>70757</distance>
+        </step>
+        <step>
+            <direction>
+                <![CDATA[Turn <b>left</b> at <b>ทางแยก ดอยพระบาท</b> to stay on <b>Route 11</b>]]>
+            </direction>
+            <distance>82745</distance>
+        </step>
+        <step>
+            <direction>
+                <![CDATA[Slight <b>left</b>]]>
+            </direction>
+            <distance>494</distance>
+        </step>
+        <step>
+            <direction>
+                <![CDATA[Turn <b>right</b> onto <b>Route 11</b><div style="font-size:0.9em">Parts of this road may be closed at certain times or days</div><div style="font-size:0.9em">Pass by Laem Thong Block Ceramics Industry Factory (on the left in 8.9&nbsp;km)</div>]]>
+            </direction>
+            <distance>10747</distance>
+        </step>
+        <step>
+            <direction>
+                <![CDATA[Slight <b>left</b>]]>
+            </direction>
+            <distance>625</distance>
+        </step>
+        <step>
+            <direction>
+                <![CDATA[Take the ramp onto <b>Route 121</b>]]>
+            </direction>
+            <distance>1601</distance>
+        </step>
+        <step>
+            <direction>
+                <![CDATA[Continue straight to stay on <b>Route 121</b>]]>
+            </direction>
+            <distance>3576</distance>
+        </step>
+        <step>
+            <direction>
+                <![CDATA[Slight <b>left</b>]]>
+            </direction>
+            <distance>641</distance>
+        </step>
+        <step>
+            <direction>
+                <![CDATA[Turn <b>left</b> onto <b>ชม.4032</b>]]>
+            </direction>
+            <distance>1506</distance>
+        </step>
+        <step>
+            <direction>
+                <![CDATA[Turn <b>right</b>]]>
+            </direction>
+            <distance>133</distance>
+        </step>
+        <step>
+            <direction>
+                <![CDATA[Turn <b>left</b>]]>
+            </direction>
+            <distance>121</distance>
+        </step>
+        <step>
+            <direction>
+                <![CDATA[Turn <b>right</b>]]>
+            </direction>
+            <distance>15</distance>
+        </step>
+    </steps>
+</route>
