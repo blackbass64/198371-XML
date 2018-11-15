@@ -1,7 +1,8 @@
 var request1 = require("request");
 var http = require("http");
+var url = "https://www.kku.ac.th/ikku/api/activities/services/topActivity.php";
 
-request1.get("https://www.kku.ac.th/ikku/api/activities/services/topActivity.php", (error, response, body) => {
+request1.get(url, (error, response, body) => {
     if (error) {
         return console.dir(error);
     }
