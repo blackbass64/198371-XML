@@ -1,0 +1,56 @@
+<!-- First step You should install a chrome extention "Moesif Origin & CORS"
+This plugin allows you to send and debug cross-domain requests without receiving Cross-Origin Errors.  -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Call News Feed</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <section></section>
+    <input type="button" value=".xml file" onclick="window.location.href='call-news-feed.xml' ">
+
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: 'http://www.bangkokbiznews.com/rss/feed/technology.xml',
+                // Each day, the technology news is not constant.
+                type: 'GET',
+                dataType: "xml",
+                success: function (data) {
+                    parseXml(data);
+                }
+            });
+        });
+
+        function parseXml(xml) {
+            var section = document.querySelector('section');
+
+            var channel = $(xml).find("channel");
+            var channel_title = channel.find("title").first().text();
+            // <object.first()> is a function to call object for the first element
+
+            var content = "<news>";
+            content += "<channel_title>" + channel_title + "</channel_title>";
+
+            var items = channel.find("item");
+
+            $(items).each(function () {
+                content += "<item>";
+                content += "<title>" + $(this).find("title").first().text() + "</title>";
+                content += "<link>" + $(this).find("link").first().text() + "</link>";
+                content += "</item>";
+            });
+
+            content += "</news>";
+            section.textContent = content;
+        }
+    </script>
+
+</body>
+
+</html>

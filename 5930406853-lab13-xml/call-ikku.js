@@ -8,7 +8,6 @@ request1.get(url, (error, response, body) => {
     }
     var activityOBJ = JSON.parse(body);
     
-
     var act = activityOBJ.activities;
     http.createServer(function (req, res) {
         res.writeHead(200, {
@@ -26,7 +25,7 @@ request1.get(url, (error, response, body) => {
             res.write("<td style=\"padding-left: 20px;\">" + (i+1) + ". </td>");
             res.write("<td style=\"padding-left: 20px;\">" + act[i].dateSt + "</td>");
             res.write("<td style=\"padding-left: 20px;\"><a href=\"" + act[i].url + "\">" + act[i].title + "</a></td>");
-            // you cat setting width in style => width: XX%
+            // you can setting width of content in style => width: XX%
             res.write("<td style=\"padding-left: 20px;\">" + act[i].contact.phone + "</td>");
             res.write("<td style=\"padding-left: 20px;\">");
         }
