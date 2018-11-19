@@ -20,10 +20,12 @@
     <button>Load Data</button>
 
     <script>
+        var url = 'https://maps.googleapis.com/maps/api/geocode/xml?address=Khon%20Kaen%20University&key=AIzaSyCWgUnlYDU7-G54p0k6AgfHaYQWU-FKqAE'
+
         $(document).ready(function () {
             $('button').click(function () {
                 $.ajax({
-                    url: 'position.xml',
+                    url: url,
                     type: 'GET',
                     dataType: 'xml',
                     success: function (data) {

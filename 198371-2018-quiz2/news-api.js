@@ -11,8 +11,8 @@ app.get('/', function (req, res) {
         if (err) {
             console.error(err)
         }
-        
-       var newsArr = [];
+
+        var newsArr = [];
         for (var i = 0; i < obj.news.length; i++) {
             var title = obj.news[i].title;
             var url = obj.news[i].url;
@@ -29,7 +29,7 @@ app.get('/', function (req, res) {
             headlines: 'Current KKU News',
             news: newsArr
         }
-        
+
         jsonfile.writeFile(file_write, obj2, function (err) {
             if (err) console.error(err)
             res.send(obj2);
