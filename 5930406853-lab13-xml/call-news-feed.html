@@ -8,10 +8,13 @@ This plugin allows you to send and debug cross-domain requests without receiving
     <meta charset="utf-8" />
     <title>Call News Feed</title>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://vuejs.org/js/vue.min.js"></script>
 </head>
 
 <body>
-    <section></section>
+    <div id="app">
+        <section>{{ message }}</section>
+    </div>
     <input type="button" value=".xml file" onclick="window.location.href='call-news-feed.xml' ">
 
     <script>
@@ -28,8 +31,6 @@ This plugin allows you to send and debug cross-domain requests without receiving
         });
 
         function parseXml(xml) {
-            var section = document.querySelector('section');
-
             var channel = $(xml).find("channel");
             var channel_title = channel.find("title").first().text();
             // <object.first()> is a function to call object for the first element.
@@ -47,7 +48,13 @@ This plugin allows you to send and debug cross-domain requests without receiving
             });
 
             content += "</news>";
-            section.textContent = content;
+
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    message: content
+                }
+            })
         }
     </script>
 
